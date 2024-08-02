@@ -109,16 +109,28 @@ struct Meituan {
       .margin({ left: 33, right: 17 })
 
       TextInput({
-        placeholder: '请输入手机号'
+        placeholder: '请输入手机号',
       })
         .width('90%')
         .height(60)
-      TextInput({
-        placeholder: '请输入验证码'
+        .showUnderline(true)
+      Row() {
+        TextInput({
+          placeholder: '请输入验证码',
+        })
+          .layoutWeight(2)
+          .showUnderline(true)
+          .underlineColor('#fff')
+        Text('|')
+          .margin({ right: 10 })
+          .fontColor('#f4f4f4')
+        Text('获取验证码')
+          .layoutWeight(1)
+      }
+      .width('90%')
+      .height(60)
+      .border({ width: { bottom: 1 }, color: '#f4f4f4' })
 
-      })
-        .width('90%')
-        .height(60)
       Button('登录')
         .width('90%')
         .height(50)
